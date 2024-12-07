@@ -1,0 +1,59 @@
+{
+  "name": "React Vite Development",
+  "dockerFile": "Dockerfile",
+  "forwardPorts": [5173],
+
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "sh",
+    "terminal.integrated.profiles.linux": {
+      "sh": {
+        "path": "/bin/sh"
+      }
+    }
+  },
+
+  // Montar el código y manejar node_modules
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/dev/visittrackerfiis,type=bind,consistency=cached",
+  "workspaceFolder": "/home/dev/visittrackerfiis",
+  // "mounts": [
+  //   "source=nodemodules,target=/home/dev/visittrackerfiis/node_modules,type=volume"
+  // ],
+
+  // Configuración de VSCode
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "formulahendry.auto-rename-tag",
+        "bradlc.vscode-tailwindcss",
+        "christian-kohler.path-intellisense",
+        "streetsidesoftware.code-spell-checker",
+        "eamodio.gitlens"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "always"
+        },
+        "files.exclude": {
+          "node_modules": true
+        }
+      }
+    }
+  },
+
+  // Comandos post-creación
+  // "postCreateCommand": "sudo chown -R dev:dev /home/dev/visittrackerfiis/node_modules && npm install",
+// "postCreateCommand":"chown -R dev:dev /home/dev/visittrackerfiis && su dev",
+// "postStartCommand": "npm install",
+"postCreateCommand": "npm install",
+
+
+  // Features adicionales
+
+  // Usuario no root
+  // "containerUser": "dev",
+  "remoteUser": "dev"
+}
