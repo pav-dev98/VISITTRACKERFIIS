@@ -46,10 +46,9 @@
 
   // Comandos post-creación
   // "postCreateCommand": "sudo chown -R dev:dev /home/dev/visittrackerfiis/node_modules && npm install",
-// "postCreateCommand":"chown -R dev:dev /home/dev/visittrackerfiis && su dev",
-// "postStartCommand": "npm install",
-"postCreateCommand": "npm install",
-
+  // "postCreateCommand":"chown -R dev:dev /home/dev/visittrackerfiis && su dev",
+  // "postStartCommand": "npm install",
+  "postCreateCommand": "npm install",
 
   // Features adicionales
 
