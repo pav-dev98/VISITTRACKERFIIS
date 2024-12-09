@@ -10,12 +10,12 @@
 ### Getting Started
 1. Clone the repository
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/pav-dev98/VISITTRACKERFIIS.git
    ```
 
 2. Open in VSCode
    ```bash
-   code [project-folder]
+   code VISITTRACKERFIIS
    ```
 
 3. When prompted "Reopen in Container" click "Reopen"
